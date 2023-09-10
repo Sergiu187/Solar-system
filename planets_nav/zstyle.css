@@ -62,3 +62,16 @@ ul, a{
 #planet-container {
   flex-direction: column;
 }
+
+#planet-description-container {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  font-size: 22px;
+  margin-left: auto;
+  position: absolute;
+  top: 200px;
+  right: 50px;
+  color: black;
+}

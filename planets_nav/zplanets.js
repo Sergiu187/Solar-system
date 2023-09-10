@@ -33,11 +33,6 @@ async function generateMenu() {
   const menu = document.getElementById("menu");
   const ul = document.createElement("ul");
 
-  // const navPlanets =  fetch('../content/navPlanets.json')
-  // .then(response => response.json().then(rsp=>rsp));
-  // destructured planets from json object
-  // const navPlanets = async ()=> fetch('');
-
   const { planets } = await getPlanets();
   console.log(planets);
 
@@ -68,10 +63,47 @@ async function generateImage() {
 
 async function getPlanetDetails() {
   const currentPlanet = await getCurrentPlanet();
-  const getPlanetDetails = () => fetch(`https://api.api-ninjas.com/v1/planets?name=${currentPlanet.name}`)
+
+  const passFile = await fetch("../content/password.json");
+  const passwords = await passFile.json();
+
+  const url = `https://api.api-ninjas.com/v1/planets?name=${currentPlanet.name}`
+
+  const getPlanetDetails = async () => await fetch(url, {
+    headers: {
+      "X-Api-Key": passwords.apiKeyNinja
+    }
+  });
 
   try {
-    const plDetail = await getPlanetDetails();
+    const plDetail = (await getPlanetDetails().then(data => data.json()))[0];
+    console.log(plDetail)
+
+    const planetContainer = document.getElementById("planet-container");
+
+    // Create an image element and set its source to the planet's image
+    const planetDescription = document.createElement("div");
+    planetDescription.id = 'planet-description-container';
+
+    const para1 = document.createElement('p');
+    const node1 = document.createTextNode(`Mass: ${plDetail.mass}`);
+    para1.appendChild(node1);
+
+    planetDescription.appendChild(para1);
+
+    const para2 = document.createElement('p');
+    const node2 = document.createTextNode(`Temperature: ${plDetail.temperature}`);
+    para2.appendChild(node2);
+
+    planetDescription.appendChild(para2);
+
+    const para3 = document.createElement('p');
+    const node3 = document.createTextNode(`Distance Light Years: ${plDetail.distance_light_year}`);
+    para3.appendChild(node3);
+
+    planetDescription.appendChild(para3);
+
+    planetContainer.appendChild(planetDescription)
   } catch {
     alert('Could not retrieve Planet Details')
   }
