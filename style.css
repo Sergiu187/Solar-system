@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  background-image: url('https://thumbs.gfycat.com/HarmfulOptimalAlligatorsnappingturtle-size_restricted.gif');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+
+/*container for menu*/
+.menu{
+  position: relative;
+  width: 900px; /*Size of the menu container */
+  height: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li{
+  position: absolute;
+  list-style: none;
+  left: 0;
+  transform-origin: 450px;
+  transition: 0.5s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0deg) translateX(450px); /*arrange planets behind the sun  and distance of the planets from the sun*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;/* Size of the planet circles */
+  height: 10px;
+  /* border-radius: 50% ; */
+}
+
+
+
+/* .menu.active li{
+  transform: rotate(calc(360deg/8 * var(--i)));
+} */
+
+.toggle{
+  position: absolute;
+  width: 500px;  /* The size of the sun */
+  height: 500px;
+  background-image:url('../planets/sun.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(192, 27, 27, 0.15);
+  font-size: 1em;
+  transition: transform 1.25s;
+}
+
+.saturn {
+  width: 400px;
+  height: 300px;
+  
+}
+
+/* .menu.active .toggle{
+  transform: rotate(315deg);
+} */
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 50px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+/* https://pixlr.com/x/#editor */
+
+
+article {
+  display: column;
+  width: 800px;
+  font-size: 25px;
+}
+
+ h2 {
+  color: aliceblue;
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+p{
+  color: rgb(200, 210, 219);
+  display: flex;
+  justify-content: center;
+  text-indent: 50px;
+  letter-spacing: 1px;
+  text-align: justify;
+  font-family:'Courier New', Courier
+}
+
+
+/* .running-text for api */
+marquee, .running-text {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+

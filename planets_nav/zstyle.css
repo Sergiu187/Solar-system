@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://thumbs.gfycat.com/HarmfulOptimalAlligatorsnappingturtle-size_restricted.gif');
+}
+
+ul, a{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+   margin-top: 2em;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier;
+  color: rgb(200, 210, 219);
+}
+
+#planet-container {
+  display: flex;
+ align-items: center;
+}
+
+#planet-container img {
+  width: auto;
+  height: auto;
+  max-height: 20vh;
+  min-height: 20vw;
+}
+
+#planet-container h2 {
+  flex: 1;
+  padding: 0 2em;
+  font-size: 2rem;
+   margin-top: 2em;
+  letter-spacing: 1px;
+ text-align: right;
+  color: rgb(200, 210, 219);
+  font-family: 'Courier New', Courier;
+  order: 1;
+  
+}
+
+#planet-container p{
+  flex: 1;
+  padding: 0 2em;
+  font-size: 1.3rem;
+   margin-top: 2em;
+  letter-spacing: 1px;
+  text-align: justify;
+  color: rgb(200, 210, 219);
+  margin-top: 1em;
+  line-height: 1.1;
+  order: 2;
+  font-family: 'Courier New', Courier;
+}
+
+#planet-container {
+  flex-direction: column;
+}

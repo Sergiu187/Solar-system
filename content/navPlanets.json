@@ -1,0 +1,11 @@
+{ "planets" : [
+    { "name": "Home", "file": "../index" },
+    { "name": "Earth", "file": "earth", "image": "../planets/earth.png" },
+    { "name": "Jupiter", "file": "jupiter", "image": "../planets/jupiter.png" },
+    { "name": "Mars", "file": "mars", "image": "../planets/mars.png" },
+    { "name": "Mercury", "file": "mercury", "image": "../planets/mercury.png" },
+    { "name": "Neptune", "file": "neptune", "image": "../planets/neptune.png" },
+    { "name": "Saturn", "file": "saturn", "image": "../planets/saturn.png" },
+    { "name": "Uranus", "file": "uranus", "image": "../planets/uranus.png" },
+    { "name": "Venus", "file": "venus", "image": "../planets/venus.png" }
+]}
