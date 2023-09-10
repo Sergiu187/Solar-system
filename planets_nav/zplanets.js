@@ -73,7 +73,7 @@ console.log(planets)
     // Append the image element to the beginning of the planet-container
     planetContainer.insertBefore(planetImage, planetContainer.firstChild);
   }
-// Call the generateMenu() function 
+// Call the intialization functions function 
   window.addEventListener('load', generateMenu);
   window.addEventListener('load', generateImage);
 
