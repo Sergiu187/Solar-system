@@ -104,7 +104,6 @@ function applyHoverStyles(event) {
   const planet = event.target;
   planet.style.transform = 'scale(1.1)'; 
   planet.style.transition = 'transform 0.5s ease-in-out';
-
 }
 
 // Function to remove hover styles
